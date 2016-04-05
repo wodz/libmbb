@@ -203,7 +203,7 @@ static mhsm_state_t *_dispatch_event(mhsm_hsm_t *hsm, mhsm_state_t *state, mhsm_
 		result = _local_dispatch(hsm, current, event);
 
 		/* greedy transition selection */
-		if (result != current && target == state) 
+		if (result)
 			target = result;
 	}
 
